@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styleCompare.css" />
+    <title>mainComparision</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">LegitMate</div>
+            <div class="menu">
+                <button class="home-btn hov" onclick="window.location.href='index.html'">Home</button>
+                <button class="comparison-btn hov" onclick="window.location.href='comparison.html'">Compare Companies</button>
+                <button class="aboutus-btn hov" onclick="window.location.href='aboutus.html'">About Us</button>
+                
+                    <select id="filter" class="filter hov" onchange="filterResults()">
+                        <option value=""> All Categories</option>
+                        <option value="A">Starts with A</option>
+                        <option value="B">Starts with B</option>
+                        <!-- Add more filter options if needed -->
+                    </select>
+                
+                <button class="our-team-btn hov" onclick="window.location.href='team.html'">Our Team</button>
+            </div>
+        </nav>
+    
+
+        <!-- New section for search boxes -->
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="search1" placeholder="Search for Company 1">
+                <button type="submit" id="searchBtn1">Search</button>
+            </div>
+            <div class="search-box">
+                <input type="text" id="search2" placeholder="Search for Company 2">
+                <button type="submit" id="searchBtn2">Search</button>
+            </div>
+        </div>
+
+        <!-- Sections to display the search results -->
+        <div id="results-container1" class="results-container"></div>
+        <div id="results-container2" class="results-container"></div>
+    </div>
+    
+        
+    <footer><p>&copy; 2024 Digital Constellations</p></footer>
+    <script src="mainCompare.js"></script>
+</body>
+</html>
+
+
+
