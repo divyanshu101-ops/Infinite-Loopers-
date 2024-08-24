@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Details</title>
+    <link rel="stylesheet" href="stylessearch.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Fixed Navbar -->
+    <nav class="navbar">
+        <div class="logo">Digital Constellations</div>
+        <div class="menu">
+            <button class="home-btn hov" onclick="window.location.href='index.html'">Home</button>
+            <button class="comparison-btn hov" onclick="window.location.href='comparison.html'">Compare Companies</button>
+            <button class="aboutus-btn hov" onclick="window.location.href='aboutus.html'">About Us</button>
+            
+                <select id="filter" class="filter hov" onchange="filterResults()">
+                    <option value=""> All Categories</option>
+                    <option value="A">Starts with A</option>
+                    <option value="B">Starts with B</option>
+                    <!-- Add more filter options if needed -->
+                </select>
+            
+            <button class="our-team-btn hov" onclick="window.location.href='team.html'">Our Team</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="company-details">
+        <section class="search-section">
+            <form action="company-details.html" method="get" class="search-container">
+                <div class="search-icon" id="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <input type="text" id="search-input" name="company" class="search-input" placeholder="Search..." required>
+                <div id="search-results" class="search-results"></div> <!-- New search results container -->
+            </form>
+        </section>
+        <div class="craft">
+        <div class="ltext"></div>
+        <div class="cards"></div>
+        </div>
+        <section class="detail-section">
+            <h1 id="company-name">Company Name</h1>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h2>CIN:</h2>
+                    <p id="cin">U12345MH2024PTC000001</p>
+                </div>
+                <div class="info-item">
+                    <h2>Date of Registration:</h2>
+                    <p id="date-registration">01 January 2024</p>
+                </div>
+                <div class="info-item">
+                    <h2>Month Name:</h2>
+                    <p id="month-name">January</p>
+                </div>
+                <div class="info-item">
+                    <h2>State:</h2>
+                    <p id="state">Maharashtra</p>
+                </div>
+                <div class="info-item">
+                    <h2>ROC:</h2>
+                    <p id="roc">Mumbai</p>
+                </div>
+                <div class="info-item">
+                    <h2>Company Status:</h2>
+                    <p id="status">Active</p>
+                </div>
+                <div class="info-item">
+                    <h2>Category:</h2>
+                    <p id="category">Private</p>
+                </div>
+                <div class="info-item">
+                    <h2>Class:</h2>
+                    <p id="class">Company Limited by Shares</p>
+                </div>
+                <div class="info-item">
+                    <h2>Company Type:</h2>
+                    <p id="company-type">Private Limited</p>
+                </div>
+                <div class="info-item">
+                    <h2>Authorized Capital:</h2>
+                    <p id="authorized">₹1,00,00,000</p>
+                </div>
+                <div class="info-item">
+                    <h2>Paid Up Capital:</h2>
+                    <p id="paid-up">₹50,00,000</p>
+                </div>
+                <div class="info-item">
+                    <h2>Activity Score:</h2>
+                    <p id="activity-score">85</p>
+                </div>
+                <div class="info-item">
+                    <h2>Activity Description:</h2>
+                    <p id="activity-description">Retail Trade</p>
+                </div>
+                <div class="info-item">
+                    <h2>Description:</h2>
+                    <p id="description">A leading company in the retail industry with a strong presence in Maharashtra.</p>
+                </div>
+                <div class="info-item">
+                    <h2>Registered Office Address:</h2>
+                    <p id="address">1234, ABC Street, Mumbai, Maharashtra, 400001</p>
+                </div>
+                <div class="info-item">
+                    <h2>Email:</h2>
+                    <p id="email">contact@company.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Digital Constellations</p>
+    </footer>
+
+    <!-- Include GSAP Animation Script -->
+    <script src="script.js"></script>
+    <script>
+        // JavaScript to handle the display of company details
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const companyName = urlParams.get('company');
+            if (companyName) {
+                document.getElementById('company-name').textContent = companyName;
+                // Additional code to fetch and display other company details based on `companyName`
+                // For demonstration, we'll use static data. You can replace this with actual data fetching logic.
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
