@@ -127,6 +127,9 @@ def update_genScore():
             x['genuinity'] += 0
 update_genScore()
 
+# result_df = df[df['CompanyName'].str.contains('tr', case=False, na=False)]
+# print(result_df.head()['CompanyName'])
+
 app = Flask(__name__)
 
 CORS(app)
@@ -140,20 +143,20 @@ def get_company(name):
             return {
                 "name": x['name'],
                 "CIN": x['cin'],
-                "ROC code": x['roc_code'],
-                "Company Category": x['category'],
-                "Company sub-category": x['sub_category'],
-                "Company Class": x['claas'],
-                "Authorized Capital": x['authorized_capital'],
-                "Paidup Capital": x['paidup_capital'],
-                "Registration Date": x['registrationdate_date'],
-                "Office Address": x['office_address'],
-                "Listing Status": x['listing_status'],
-                "Company Status": x['company_status'],
-                "State Code": x['state_code'],
-                "Indian/Foreign": x['indian_foreign'],
-                "NIC code": x['nic_code'],
-                "Industrial Classification": x['industrial_classification'],
+                "ROC_code": x['roc_code'],
+                "Company_Category": x['category'],
+                "Company_sub_category": x['sub_category'],
+                "Company_Class": x['claas'],
+                "Authorized_Capital": x['authorized_capital'],
+                "Paidup_Capital": x['paidup_capital'],
+                "Registration_Date": x['registrationdate_date'],
+                "Office_Address": x['office_address'],
+                "Listing_Status": x['listing_status'],
+                "Company_Status": x['company_status'],
+                "State_Code": x['state_code'],
+                "Indian_Foreign": x['indian_foreign'],
+                "NIC_code": x['nic_code'],
+                "Industrial_Classification": x['industrial_classification'],
                 "Genuinity": x['genuinity']
             }
     return {"ERROR": 'Company Not Found'}
@@ -165,20 +168,20 @@ def get_company_category(category,name):
             return {
                 "name": x['name'],
                 "CIN": x['cin'],
-                "ROC code": x['roc_code'],
-                "Company Category": x['category'],
-                "Company sub-category": x['sub_category'],
-                "Company Class": x['claas'],
-                "Authorized Capital": x['authorized_capital'],
-                "Paidup Capital": x['paidup_capital'],
-                "Registration Date": x['registrationdate_date'],
-                "Office Address": x['office_address'],
-                "Listing Status": x['listing_status'],
-                "Company Status": x['company_status'],
-                "State Code": x['state_code'],
-                "Indian/Foreign": x['indian_foreign'],
-                "NIC code": x['nic_code'],
-                "Industrial Classification": x['industrial_classification']
+                "ROC_code": x['roc_code'],
+                "Company_Category": x['category'],
+                "Company_sub_category": x['sub_category'],
+                "Company_Class": x['claas'],
+                "Authorized_Capital": x['authorized_capital'],
+                "Paidup_Capital": x['paidup_capital'],
+                "Registration_Date": x['registrationdate_date'],
+                "Office_Address": x['office_address'],
+                "Listing_Status": x['listing_status'],
+                "Company_Status": x['company_status'],
+                "State_Code": x['state_code'],
+                "Indian_Foreign": x['indian_foreign'],
+                "NIC_code": x['nic_code'],
+                "Industrial_Classification": x['industrial_classification']
             }
     return {"error": 'Company Not Found'}
 
