@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{
+    --salmon:#fa8072;
+    --black:#000000;
+    --white:#ffffff;
+    --cyan:#00ffff;
+    --red:#ff0000;
+}
+body{
+    transition: background-color ease-out 1s;
+}
+.vdodiv{
+    clip-path: circle(var(--clap) at 50% 50%);
+}
+*::selection{
+    background-color: rgb(230, 70, 97);
+}
+body[theme="black"]{
+    background-color: var(--black);
+}
+body[theme="black"] .sec{
+    color:var(--white);
+    border-color: var(--white);
+}
+body[theme="cyan"]{
+    background-color: var(--cyan);
+}
+body[theme="cyan"] .sec{
+    color:var(--black);
+    border-color:var(--black) ;
+ 
+}
+body[theme="salmon"]{
+    background-color: var(--salmon);
+}
+body[theme="salmon"] .sec{
+    color: var(--black);
+    border-color:var(--black) ;
+}
+body[theme="white"]{
+    background-color: var(--white);
+}
+body[theme="white"] .sec{
+    color:var(--black);
+    border-color:var(--black) ;
+}
+.searchbar{
+    border-radius: 90px;
+}
+.searchbar input{
+    background:transparent;
+    flex:1;
+    border: 0;
+    outline: none;
+    padding: 24px 30px ;
+    font-size: 40px;
+    color: rgb(235, 221, 23);
+}
+.searchbar input::placeholder{
+    color:rgb(125, 18, 187);
+}
+.searchbar button i{
+    width: 25px;
+
+}
+.searchbar button{
+    border: 0;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-right: 3rem;
+    background-color:orangered ;
+    cursor:pointer;
+}
+
